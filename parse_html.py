@@ -89,11 +89,11 @@ for headline in soup.find_all("span", {"style": H2_STYLE}):
                 continue
 
             if BOLD_STYLE in sub_item.attrs.get("style", ""):
-                output_text += f" <strong>{clean_text(sub_item.get_text())}</strong> "
+                output_text += f"  <strong>{clean_text(sub_item.get_text())}</strong>  "
                 continue
 
             if ENCOUNTER_TITLE_STYLE in sub_item.attrs.get("style", ""):
-                output_text += f" <strong>{clean_text(sub_item.get_text())}</strong> "
+                output_text += f"  <strong>{clean_text(sub_item.get_text())}</strong>  "
                 continue
 
             output_text += clean_text(sub_item.get_text())
