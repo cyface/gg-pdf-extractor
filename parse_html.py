@@ -24,6 +24,7 @@ def clean_text(text_to_clean):
     text_to_clean = re.sub(r"×", "*", text_to_clean)
     text_to_clean = re.sub(r"•", "*", text_to_clean)
     text_to_clean = re.sub(r"…", "...", text_to_clean)
+    text_to_clean = re.sub(r"</em><em>", "", text_to_clean)
     text_to_clean = re.sub(r"(\dd\d+)([\+\-\*]\d+)?", r"[[/roll \1\2]]", text_to_clean)
     text_to_clean = re.sub(r"  ", " ", text_to_clean)
     return text_to_clean
