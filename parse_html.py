@@ -11,7 +11,7 @@ ITALIC_STYLE = "font-family: BookAntiqua-Italic"
 INTRO_H1 = "<h1>Introduction</h1>"
 ENCOUNTER_TITLE_STYLE = "font-family: CooperBlack; font-size:9px"
 
-soup = BeautifulSoup(open("output/output.html"), "html.parser")
+soup = BeautifulSoup(open("./output.html"), "html.parser")
 
 
 def clean_text(text_to_clean):
@@ -104,5 +104,5 @@ for headline in soup.find_all("span", {"style": H2_STYLE}):
 
 output_text = clean_spaces(output_text)
 print(output_text)
-with open("output/formatted.html", 'w') as out_file:
+with open("./formatted.html", 'w') as out_file:
     out_file.write(output_text)
